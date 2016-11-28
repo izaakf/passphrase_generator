@@ -29,11 +29,11 @@ def character_selection(password_combinations)
     print questions[x]
     answer = gets.chomp.to_b
 
+    # if the user does not want a type of character it is removed from the possible character list
     if answer != true
       password_combinations.delete(password_combinations[x - array_pos])
       array_pos +=1
     end
-
   end
 end
 
@@ -41,14 +41,14 @@ def password_generator(character_list,password_combinations)
   password = ''
 
   # prompts user input
-  print 'What length do you want your password to be? '
+  print "What length do you want your password to be? "
   pass_length = gets.to_i
 
   pass_length.times do
     # adds a random character from the users selection of character types user specified number of times
     password.concat(character_list[password_combinations.sample].sample)
   end
-  
+
   print password
 end
 
