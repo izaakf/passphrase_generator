@@ -1,6 +1,6 @@
 # Made by Zak Freeman
 
-# converts input to true/false
+# converts user input to boolean
 class String
   def to_b
     ["y", "yes", "Y", "YES"].include?(self.chomp.downcase)
