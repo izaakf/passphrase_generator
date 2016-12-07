@@ -30,7 +30,7 @@ def character_selection(password_combinations)
     answer = gets.chomp.to_b
 
     # if the user does not want a type of character it is removed from the possible character list
-    if answer != true
+    unless answer
       password_combinations.delete(password_combinations[x - array_pos])
       array_pos +=1
     end
