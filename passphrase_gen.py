@@ -38,8 +38,8 @@ def generate_password(word, encoded_letters):
 
 if __name__ == "__main__":
     import pyperclip
-    
-    
+
+
     res = requests.get(API_ENDPOINT)
     json = res.json()['list']
     words = get_words(clean_words(json), 2)
