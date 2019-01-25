@@ -1,15 +1,11 @@
 import requests
 import random
-from termcolor import colored
 from collections import defaultdict
 
 
 API_ENDPOINT = "https://api.urbandictionary.com/v0/random"
 NORMAL = "abcdefghijklmnopqrstuvwxyz"
 ENCODE = "48(D3F9#!JK1MN0PQR5+UVWXY2"
-
-res = requests.get(API_ENDPOINT)
-json = res.json()['list']
 
 
 def clean_words(word_list):
@@ -42,7 +38,10 @@ def generate_password(word, encoded_letters):
 
 if __name__ == "__main__":
     import pyperclip
-
+    
+    
+    res = requests.get(API_ENDPOINT)
+    json = res.json()['list']
     words = get_words(clean_words(json), 2)
     passphrase = generate_password(words, encode_characters(words))
     # print(passphrase)
