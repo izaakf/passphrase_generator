@@ -1,8 +1,7 @@
 # password_generator
-A password generator written in Ruby, using hashes. Creates a strong randomly generated password, based on user input.
+Passphrase generator that grabs random words from urbandictionary.com obfuscates some characters then puts the output on your clipboard.
 
 # How to run
-Download and navigate to the file then type
 ```
-$ ruby password_generator.rb
+$ python passphrase_generator.py
 ```
